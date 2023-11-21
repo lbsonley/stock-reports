@@ -1,6 +1,37 @@
+from datetime import *
+from dateutil.relativedelta import *
 import pandas as pd
 import yfinance as yf
 import mplfinance as mpf
+
+
+def get_dates():
+    # Dates
+    today = datetime.now()
+    last_friday = (today + relativedelta(weekday=FR(-1))).replace(
+        hour=23, minute=59, second=59
+    )
+    last_monday = (last_friday + relativedelta(weekday=MO(-1))).replace(
+        hour=0, minute=0, second=0, microsecond=0
+    )
+    last_quarter = (last_friday + relativedelta(weeks=-13)).replace(
+        hour=0, minute=0, second=0, microsecond=0
+    )
+    last_year = (last_friday + relativedelta(weeks=-52)).replace(
+        hour=0, minute=0, second=0, microsecond=0
+    )
+    last_5_year = (last_friday + relativedelta(weeks=-260)).replace(
+        hour=0, minute=0, second=0, microsecond=0
+    )
+
+    return {
+        "today": today,
+        "last_friday": last_friday,
+        "last_monday": last_monday,
+        "last_quarter": last_quarter,
+        "last_year": last_year,
+        "last_5_year": last_5_year,
+    }
 
 
 def format_date(date):

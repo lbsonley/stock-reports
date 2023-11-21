@@ -1,30 +1,17 @@
 from pathlib import Path
 from datetime import *
 from dateutil.relativedelta import *
-from lib.analyze import outperformers
+from lib.analyze import outperformers_index_sector
+from lib.utils import get_dates
 
-# Dates
-today = datetime.now()
-last_friday = today + relativedelta(weekday=FR(-1))
-last_monday = (last_friday + relativedelta(weekday=MO(-1))).replace(
-    hour=0, minute=0, second=0, microsecond=0
-)
-last_quarter = (last_friday + relativedelta(weeks=-13)).replace(
-    hour=0, minute=0, second=0, microsecond=0
-)
-last_year = (last_friday + relativedelta(weeks=-52)).replace(
-    hour=0, minute=0, second=0, microsecond=0
-)
-last_5_year = (last_friday + relativedelta(weeks=-260)).replace(
-    hour=0, minute=0, second=0, microsecond=0
-)
+dates = get_dates()
 
 print("Fetching data for:")
 print("Strategy: Outperformers")
 print("Period: 1 Week")
-outperformers(
-    start=last_monday,
-    end=last_friday,
+outperformers_index_sector(
+    start=dates["last_monday"],
+    end=dates["last_friday"],
     interval="30m",
     period="1w",
 )
@@ -32,9 +19,9 @@ outperformers(
 print("Fetching data for:")
 print("Strategy: Outperformers")
 print("Period: 1q")
-outperformers(
-    start=last_quarter,
-    end=last_friday,
+outperformers_index_sector(
+    start=dates["last_quarter"],
+    end=dates["last_friday"],
     interval="1d",
     period="1q",
 )
@@ -42,9 +29,9 @@ outperformers(
 print("Fetching data for:")
 print("Strategy: Outperformers")
 print("Period: 1y")
-outperformers(
-    start=last_year,
-    end=last_friday,
+outperformers_index_sector(
+    start=dates["last_year"],
+    end=dates["last_friday"],
     interval="1wk",
     period="1y",
 )
@@ -52,9 +39,9 @@ outperformers(
 print("Fetching data for:")
 print("Strategy: Outperformers")
 print("Period: 5y")
-outperformers(
-    start=last_5_year,
-    end=last_friday,
+outperformers_index_sector(
+    start=dates["last_5_year"],
+    end=dates["last_friday"],
     interval="1mo",
     period="5y",
 )
