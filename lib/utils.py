@@ -1,0 +1,91 @@
+import pandas as pd
+import yfinance as yf
+import mplfinance as mpf
+
+
+def format_date(date):
+    return date.strftime("%y-%m-%d")
+
+
+def format_interval(interval):
+    formatted_interval = ""
+
+    match interval:
+        case "1mo":
+            formatted_interval = "monthly"
+        case "1wk":
+            formatted_interval = "weekly"
+        case "1d":
+            formatted_interval = "daily"
+        case "1h":
+            formatted_interval = "hourly"
+
+    return formatted_interval
+
+
+def load_stocks(symbols, interval, start, end):
+    df = yf.download(
+        symbols,
+        interval=interval,
+        start=start,
+        end=end,
+        group_by="ticker",
+    )
+
+    return df
+
+
+def get_returns(history, constituents, label):
+    returns = []
+
+    for symbol in constituents.loc[:, "Symbol"].to_list():
+        last_year_close = history[symbol]["Close"].iloc[0]
+        last_week_close = history[symbol]["Close"].iloc[-1]
+
+        yoy_return = (last_week_close - last_year_close) / last_year_close
+
+        name = constituents.loc[
+            constituents["Symbol"] == symbol, "Name"
+        ].values[0]
+
+        returns.append([symbol, name, yoy_return])
+
+    df = pd.DataFrame(
+        returns,
+        columns=[
+            "Symbol",
+            "Name",
+            label,
+        ],
+    )
+    df.sort_values(by=[label], inplace=True, ascending=False)
+
+    return df
+
+
+def make_chart(df, title, strategy, filename):
+    print("making chart for: %s" % title)
+
+    mc = mpf.make_marketcolors(
+        up="tab:green",
+        down="tab:red",
+        edge={"up": "green", "down": "red"},
+        wick={"up": "green", "down": "red"},
+        volume={"up": "green", "down": "red"},
+    )
+
+    s = mpf.make_mpf_style(
+        y_on_right=True,
+        marketcolors=mc,
+    )
+
+    mpf.plot(
+        df,
+        title=title,
+        type="candle",
+        # volume=True,
+        style=s,
+        datetime_format="%y-%b-%d",
+        scale_padding={"top": 0.5, "left": 0.2, "bottom": 1, "right": 1},
+        savefig="pages/assets/%s/charts/%s.webp" % (strategy, filename),
+    )

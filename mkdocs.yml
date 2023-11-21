@@ -1,0 +1,32 @@
+site_name: Stock Analysis
+docs_dir: pages
+theme:
+  name: material
+  features:
+    - navigation.expand
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tracking
+    - toc.follow
+    - navigation.top
+    - content.tabs.link
+markdown_extensions:
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+plugins:
+  - search
+  - blog:
+      blog_dir: .
+      categories: true
+      categories_allowed:
+        - Summary
+        - Indices
+        - Sectors
+        - Securities
+        - Trades
+  - table-reader
+  - print-site
+extra_javascript:
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - js/tablesort.js
