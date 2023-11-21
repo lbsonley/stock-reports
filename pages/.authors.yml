@@ -2,4 +2,4 @@ authors:
   ben:
     name: Ben
     description: Technical Strategist
-    avatar: assets/img/straight.png
+    avatar: ./assets/img/straight.png
