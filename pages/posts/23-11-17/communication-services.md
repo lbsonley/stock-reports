@@ -4,7 +4,7 @@ date:
 categories:
   - Securities
 authors:
-  - ben
+  - lestoque
 ---
 
 # Communication services - 2023-11-17
@@ -14,7 +14,6 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for META, NFLX, TTWO.
 <!-- more -->
 
 ## Returns
-
 
 === "1W"
 
@@ -32,10 +31,7 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for META, NFLX, TTWO.
 
     {{ read_csv("../../assets/outperformers/returns/23-11-17/communication-services-5y.csv", floatfmt=".1%") }}
 
-
-
 ## Charts
-
 
 ### META
 
@@ -90,5 +86,3 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for META, NFLX, TTWO.
 === "5Y"
 
     ![5Y - TTWO](../../assets/outperformers/charts/23-11-17/communication-services/TTWO-5y.webp)
-
-

@@ -4,7 +4,7 @@ date:
 categories:
   - Sectors
 authors:
-  - ben
+  - lestoque
 ---
 
 # Sectors - 2023-11-17
@@ -14,7 +14,6 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 <!-- more -->
 
 ## Returns
-
 
 === "1W"
 
@@ -32,10 +31,7 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 
     {{ read_csv("../../assets/outperformers/returns/23-11-17/sectors-5y.csv", floatfmt=".1%") }}
 
-
-
 ## Charts
-
 
 ### XLC
 
@@ -234,5 +230,3 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 === "5Y"
 
     ![5Y - XLU](../../assets/outperformers/charts/23-11-17/sectors/XLU-5y.webp)
-
-

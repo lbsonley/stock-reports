@@ -4,7 +4,7 @@ date:
 categories:
   - Indices
 authors:
-  - ben
+  - lestoque
 ---
 
 # Indices - 2023-11-17
@@ -14,7 +14,6 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for SPY, QQQ, DIA, IWM.
 <!-- more -->
 
 ## Returns
-
 
 === "1W"
 
@@ -32,10 +31,7 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for SPY, QQQ, DIA, IWM.
 
     {{ read_csv("../../assets/outperformers/returns/23-11-17/indices-5y.csv", floatfmt=".1%") }}
 
-
-
 ## Charts
-
 
 ### SPY
 
@@ -108,5 +104,3 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for SPY, QQQ, DIA, IWM.
 === "5Y"
 
     ![5Y - IWM](../../assets/outperformers/charts/23-11-17/indices/IWM-5y.webp)
-
-

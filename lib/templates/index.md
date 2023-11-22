@@ -4,7 +4,7 @@ date:
 categories:
   - ${category}
 authors:
-  - ben
+  - lestoque
 ---
 
 # ${title}

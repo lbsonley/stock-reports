@@ -4,7 +4,7 @@ date:
 categories:
   - Securities
 authors:
-  - ben
+  - lestoque
 ---
 
 # Information technology - 2023-11-17
@@ -14,7 +14,6 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 <!-- more -->
 
 ## Returns
-
 
 === "1W"
 
@@ -32,10 +31,7 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
     {{ read_csv("../../assets/outperformers/returns/23-11-17/information-technology-5y.csv", floatfmt=".1%") }}
 
-
-
 ## Charts
-
 
 ### NVDA
 
@@ -396,5 +392,3 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 === "5Y"
 
     ![5Y - STX](../../assets/outperformers/charts/23-11-17/information-technology/STX-5y.webp)
-
-
