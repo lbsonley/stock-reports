@@ -1,7 +1,7 @@
 from pathlib import Path
 from datetime import *
 from dateutil.relativedelta import *
-from lib.analyze import outperformers_index_sector
+from lib.analyze import *
 from lib.utils import get_dates
 
 dates = get_dates()
@@ -45,3 +45,5 @@ outperformers_index_sector(
     interval="1mo",
     period="5y",
 )
+
+outperformers_stocks("1y")

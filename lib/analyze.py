@@ -4,7 +4,167 @@ from lib.utils import *
 from lib.makereport import *
 
 
-def outperformers(start, end, interval, period):
+def outperformers_stocks(period):
+    dates = get_dates()
+
+    returns_label = ""
+    chart_interval_label = ""
+    outperform_start = ""
+
+    match period:
+        case "1w":
+            returns_label = "1 Week ∆"
+            chart_interval = "30m"
+            chart_interval_label = "30m"
+            outperform_start = dates["last_monday"]
+        case "1q":
+            returns_label = "13 Week ∆"
+            chart_interval = "1d"
+            chart_interval_label = "Daily"
+            outperform_start = dates["last_quarter"]
+        case "1y":
+            returns_label = "52 Week ∆"
+            chart_interval = "1wk"
+            chart_interval_label = "Weekly"
+            outperform_start = dates["last_year"]
+        case "5y":
+            returns_label = "5 Year ∆"
+            chart_interval = "1mo"
+            chart_interval_label = "Monthly"
+            outperform_start = dates["last_5_year"]
+
+    indices_returns = pd.read_csv(
+        f'pages/assets/outperformers/returns/{format_date(dates["last_friday"])}/indices-{period}.csv'
+    )
+    sector_returns = pd.read_csv(
+        f'pages/assets/outperformers/returns/{format_date(dates["last_friday"])}/sectors-{period}.csv'
+    )
+
+    spx_return = indices_returns.loc[
+        indices_returns["Symbol"] == "SPY", returns_label
+    ].values[0]
+
+    outperforming_sectors = sector_returns[
+        sector_returns[returns_label] > spx_return
+    ]
+    outperforming_sector_names = outperforming_sectors.loc[:, "Name"].to_list()
+
+    ##############
+    # Securities #
+    ##############
+    sp500_constituents = pd.read_csv("data/sp500-constituents.csv")
+
+    for name in outperforming_sector_names:
+        # make directory for charts
+        chart_path = f'pages/assets/outperformers/charts/{format_date(dates["last_friday"])}/{name.lower().replace(" ", "-")}'
+        Path(chart_path).mkdir(parents=True, exist_ok=True)
+
+        constituents = sp500_constituents.loc[
+            sp500_constituents["GICS Sector"] == name
+        ]
+        constituent_symbols = constituents.loc[:, "Symbol"].to_list()
+
+        constituent_history = load_stocks(
+            constituent_symbols,
+            chart_interval,
+            outperform_start,
+            dates["last_friday"],
+        )
+
+        constituent_returns = get_returns(
+            constituent_history, constituents, returns_label
+        )
+
+        sector_return = sector_returns.loc[
+            sector_returns["Name"] == name, returns_label
+        ].values[0]
+
+        outperforming_stocks = constituent_returns[
+            constituent_returns[returns_label] > sector_return
+        ]
+        outperforming_stocks.to_csv(
+            f'pages/assets/outperformers/returns/{format_date(dates["last_friday"])}/{name.lower().replace(" ", "-")}-{period}.csv',
+            index=False,
+        )
+        outperforming_stock_symbols = outperforming_stocks.loc[
+            :, "Symbol"
+        ].to_list()
+
+        time_frame_configs = [
+            ("30m", dates["last_monday"]),
+            ("1d", dates["last_quarter"]),
+            ("1wk", dates["last_year"]),
+            ("1mo", dates["last_5_year"]),
+        ]
+
+        print("load stocks for sector: %s" % name)
+        for interval, start in time_frame_configs:
+            print(f"load history for interval: {interval}")
+            constituent_history = load_stocks(
+                outperforming_stock_symbols,
+                interval,
+                start,
+                dates["last_friday"],
+            )
+
+            stock_return_label = ""
+            stock_return_period = ""
+            match interval:
+                case "30m":
+                    stock_return_label = "1 Week ∆"
+                    stock_return_period = "1w"
+                case "1d":
+                    stock_return_label = "13 Week ∆"
+                    stock_return_period = "1q"
+                case "1wk":
+                    stock_return_label = "52 Week ∆"
+                    stock_return_period = "1y"
+                case "1mo":
+                    stock_return_label = "5 Year ∆"
+                    stock_return_period = "5y"
+
+            constituent_returns_for_table = get_returns(
+                constituent_history,
+                outperforming_stocks,
+                stock_return_label,
+            )
+            constituent_returns_for_table.to_csv(
+                f'pages/assets/outperformers/returns/{format_date(dates["last_friday"])}/{name.lower().replace(" ", "-")}-{stock_return_period}.csv',
+                index=False,
+            )
+
+            for symbol in outperforming_stock_symbols:
+                stock_history = constituent_history.loc[:, symbol]
+                stock_name = constituents.loc[
+                    constituents["Symbol"] == symbol, "Name"
+                ].values[0]
+
+                # make sure index column has proper name and type
+                if stock_history.index.name == None:
+                    stock_history.index.name = "Datetime"
+
+                if (
+                    type(stock_history.index)
+                    != "<class 'pandas.core.indexes.datetimes.DatetimeIndex'>"
+                ):
+                    stock_history.index = pd.to_datetime(stock_history.index)
+
+                make_chart(
+                    df=stock_history,
+                    title="%s (%s) - %s"
+                    % (stock_name, symbol, stock_return_period),
+                    strategy="outperformers",
+                    filename=f'{format_date(dates["last_friday"])}/{name.lower().replace(" ", "-")}/{symbol}-{stock_return_period}',
+                )
+        make_report(
+            dates["last_friday"],
+            "Securities",
+            name.lower().replace(" ", "-"),
+            outperforming_stock_symbols,
+        )
+
+
+def outperformers_index_sector(start, end, interval, period):
     returns_label = ""
     chart_interval = ""
 
@@ -35,7 +195,6 @@ def outperformers(start, end, interval, period):
     index_symbols = indices.loc[:, "Symbol"].to_list()
 
     indices_history = load_stocks(index_symbols, interval, start, end)
-    indices_history.to_csv("history/indices-history.csv")
     indices_returns = get_returns(indices_history, indices, returns_label)
     indices_returns.to_csv(
         "pages/assets/outperformers/returns/%s/indices-%s.csv"
@@ -51,7 +210,7 @@ def outperformers(start, end, interval, period):
             title="%s (%s) - %s (%s)"
             % (index_name, symbol, period, chart_interval),
             strategy="outperformers",
-            filename="%s/indices/%s-%s" % (format_date(end), symbol, period),
+            filename=f"{format_date(end)}/indices/{symbol}-{period}",
         )
 
     make_report(
@@ -92,77 +251,9 @@ def outperformers(start, end, interval, period):
             filename=f"{format_date(end)}/sectors/{symbol}-{period}",
         )
 
-    spx_return = indices_returns.loc[
-        indices_returns["Symbol"] == "SPY", returns_label
-    ].values[0]
-
-    outperforming_sectors = sector_returns[
-        sector_returns[returns_label] > spx_return
-    ]
-    outperforming_sector_names = outperforming_sectors.loc[:, "Name"].to_list()
-
     make_report(
         date=end,
         category="Sectors",
         report_name="sectors",
         symbols=sector_symbols,
     )
-
-    # ##############
-    # # Securities #
-    # ##############
-    # sp500_constituents = pd.read_csv("data/sp500-constituents.csv")
-
-    # for name in outperforming_sector_names:
-    #     constituents = sp500_constituents.loc[
-    #         sp500_constituents["GICS Sector"] == name
-    #     ]
-    #     constituent_symbols = constituents.loc[:, "Symbol"].to_list()
-
-    #     print("load stocks for sector: %s" % name)
-    #     constituent_history = load_stocks(
-    #         constituent_symbols, interval, start, end
-    #     )
-
-    #     constituent_returns = get_returns(
-    #         constituent_history, constituents, returns_label
-    #     )
-
-    #     sector_return = sector_returns.loc[
-    #         sector_returns["Name"] == name, returns_label
-    #     ].values[0]
-
-    #     outperforming_stocks = constituent_returns[
-    #         constituent_returns[returns_label] > sector_return
-    #     ]
-    #     outperforming_stocks.to_csv(
-    #         "pages/assets/outperformers/returns/%s/%s-%s.csv"
-    #         % (format_date(end), name.lower().replace(" ", "-"), period),
-    #         index=False,
-    #     )
-    #     outperforming_stock_symbols = outperforming_stocks.loc[
-    #         :, "Symbol"
-    #     ].to_list()
-
-    #     for symbol in outperforming_stock_symbols:
-    #         stock_history = constituent_history.loc[:, symbol]
-    #         stock_name = constituents.loc[
-    #             constituents["Symbol"] == symbol, "Name"
-    #         ].values[0]
-
-    #         # make sure index column has proper name and type
-    #         if stock_history.index.name == None:
-    #             stock_history.index.name = "Datetime"
-
-    #         if (
-    #             type(stock_history.index)
-    #             != "<class 'pandas.core.indexes.datetimes.DatetimeIndex'>"
-    #         ):
-    #             stock_history.index = pd.to_datetime(stock_history.index)
-
-    #         make_chart(
-    #             df=stock_history,
-    #             title="%s (%s) - %s" % (stock_name, symbol, period),
-    #             strategy="outperformers",
-    #             filename="%s/%s-%s" % (format_date(end), symbol, period),
-    #         )
