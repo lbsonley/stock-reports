@@ -2,6 +2,12 @@ site_name: Stock Analysis
 docs_dir: pages
 theme:
   name: material
+  logo: assets/img/logo-white.png
+  favicon: assets/img/logo-icon-only.png
+  font:
+    text: Sorts Mill Goudy
+  palette:
+    scheme: finance
   features:
     - navigation.expand
     - navigation.instant
@@ -27,6 +33,9 @@ plugins:
         - Trades
   - table-reader
   - print-site
+extra_css:
+  - css/color.css
+  - css/typography.css
 extra_javascript:
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - js/tablesort.js

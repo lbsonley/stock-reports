@@ -1,0 +1,17 @@
+/*
+  color scheme inspired by brevanhoward
+  base color: #141c25
+  https://www.colorhexa.com/141c25
+*/
+
+[data-md-color-scheme="finance"] {
+  --md-primary-fg-color: #1b2632;
+  --md-primary-fg-color--light: #29394b;
+  --md-primary-fg-color--dark: #141c25;
+
+  --md-default-fg-color: #141c25;
+  --md-default-fg-color--light: #364c65;
+
+  --md-typeset-color: #06090c;
+  --md-typeset-a-color: #4b698b;
+}
