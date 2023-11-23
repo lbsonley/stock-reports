@@ -15,9 +15,10 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for META, NFLX, TTWO.
 
 ## Returns
 
-=== "1W"
 
-    {{ read_csv("../../assets/outperformers/returns/23-11-17/communication-services-1w.csv", floatfmt=".1%") }}
+=== "1WK"
+
+    {{ read_csv("../../assets/outperformers/returns/23-11-17/communication-services-1wk.csv", floatfmt=".1%") }}
 
 === "1Q"
 
@@ -31,13 +32,16 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for META, NFLX, TTWO.
 
     {{ read_csv("../../assets/outperformers/returns/23-11-17/communication-services-5y.csv", floatfmt=".1%") }}
 
+
+
 ## Charts
+
 
 ### META
 
-=== "1W"
+=== "1WK"
 
-    ![1W - META](../../assets/outperformers/charts/23-11-17/communication-services/META-1w.webp)
+    ![1WK - META](../../assets/outperformers/charts/23-11-17/communication-services/META-1wk.webp)
 
 === "1Q"
 
@@ -53,9 +57,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for META, NFLX, TTWO.
 
 ### NFLX
 
-=== "1W"
+=== "1WK"
 
-    ![1W - NFLX](../../assets/outperformers/charts/23-11-17/communication-services/NFLX-1w.webp)
+    ![1WK - NFLX](../../assets/outperformers/charts/23-11-17/communication-services/NFLX-1wk.webp)
 
 === "1Q"
 
@@ -71,9 +75,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for META, NFLX, TTWO.
 
 ### TTWO
 
-=== "1W"
+=== "1WK"
 
-    ![1W - TTWO](../../assets/outperformers/charts/23-11-17/communication-services/TTWO-1w.webp)
+    ![1WK - TTWO](../../assets/outperformers/charts/23-11-17/communication-services/TTWO-1wk.webp)
 
 === "1Q"
 
@@ -86,3 +90,5 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for META, NFLX, TTWO.
 === "5Y"
 
     ![5Y - TTWO](../../assets/outperformers/charts/23-11-17/communication-services/TTWO-5y.webp)
+
+

@@ -15,9 +15,10 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ## Returns
 
-=== "1W"
 
-    {{ read_csv("../../assets/outperformers/returns/23-11-17/information-technology-1w.csv", floatfmt=".1%") }}
+=== "1WK"
+
+    {{ read_csv("../../assets/outperformers/returns/23-11-17/information-technology-1wk.csv", floatfmt=".1%") }}
 
 === "1Q"
 
@@ -31,13 +32,16 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
     {{ read_csv("../../assets/outperformers/returns/23-11-17/information-technology-5y.csv", floatfmt=".1%") }}
 
+
+
 ## Charts
+
 
 ### NVDA
 
-=== "1W"
+=== "1WK"
 
-    ![1W - NVDA](../../assets/outperformers/charts/23-11-17/information-technology/NVDA-1w.webp)
+    ![1WK - NVDA](../../assets/outperformers/charts/23-11-17/information-technology/NVDA-1wk.webp)
 
 === "1Q"
 
@@ -53,9 +57,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### AVGO
 
-=== "1W"
+=== "1WK"
 
-    ![1W - AVGO](../../assets/outperformers/charts/23-11-17/information-technology/AVGO-1w.webp)
+    ![1WK - AVGO](../../assets/outperformers/charts/23-11-17/information-technology/AVGO-1wk.webp)
 
 === "1Q"
 
@@ -71,9 +75,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### ADBE
 
-=== "1W"
+=== "1WK"
 
-    ![1W - ADBE](../../assets/outperformers/charts/23-11-17/information-technology/ADBE-1w.webp)
+    ![1WK - ADBE](../../assets/outperformers/charts/23-11-17/information-technology/ADBE-1wk.webp)
 
 === "1Q"
 
@@ -89,9 +93,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### FICO
 
-=== "1W"
+=== "1WK"
 
-    ![1W - FICO](../../assets/outperformers/charts/23-11-17/information-technology/FICO-1w.webp)
+    ![1WK - FICO](../../assets/outperformers/charts/23-11-17/information-technology/FICO-1wk.webp)
 
 === "1Q"
 
@@ -107,9 +111,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### SNPS
 
-=== "1W"
+=== "1WK"
 
-    ![1W - SNPS](../../assets/outperformers/charts/23-11-17/information-technology/SNPS-1w.webp)
+    ![1WK - SNPS](../../assets/outperformers/charts/23-11-17/information-technology/SNPS-1wk.webp)
 
 === "1Q"
 
@@ -125,9 +129,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### AMD
 
-=== "1W"
+=== "1WK"
 
-    ![1W - AMD](../../assets/outperformers/charts/23-11-17/information-technology/AMD-1w.webp)
+    ![1WK - AMD](../../assets/outperformers/charts/23-11-17/information-technology/AMD-1wk.webp)
 
 === "1Q"
 
@@ -143,9 +147,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### NOW
 
-=== "1W"
+=== "1WK"
 
-    ![1W - NOW](../../assets/outperformers/charts/23-11-17/information-technology/NOW-1w.webp)
+    ![1WK - NOW](../../assets/outperformers/charts/23-11-17/information-technology/NOW-1wk.webp)
 
 === "1Q"
 
@@ -161,9 +165,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### CDNS
 
-=== "1W"
+=== "1WK"
 
-    ![1W - CDNS](../../assets/outperformers/charts/23-11-17/information-technology/CDNS-1w.webp)
+    ![1WK - CDNS](../../assets/outperformers/charts/23-11-17/information-technology/CDNS-1wk.webp)
 
 === "1Q"
 
@@ -179,9 +183,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### ANET
 
-=== "1W"
+=== "1WK"
 
-    ![1W - ANET](../../assets/outperformers/charts/23-11-17/information-technology/ANET-1w.webp)
+    ![1WK - ANET](../../assets/outperformers/charts/23-11-17/information-technology/ANET-1wk.webp)
 
 === "1Q"
 
@@ -197,9 +201,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### LRCX
 
-=== "1W"
+=== "1WK"
 
-    ![1W - LRCX](../../assets/outperformers/charts/23-11-17/information-technology/LRCX-1w.webp)
+    ![1WK - LRCX](../../assets/outperformers/charts/23-11-17/information-technology/LRCX-1wk.webp)
 
 === "1Q"
 
@@ -215,9 +219,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### MSFT
 
-=== "1W"
+=== "1WK"
 
-    ![1W - MSFT](../../assets/outperformers/charts/23-11-17/information-technology/MSFT-1w.webp)
+    ![1WK - MSFT](../../assets/outperformers/charts/23-11-17/information-technology/MSFT-1wk.webp)
 
 === "1Q"
 
@@ -233,9 +237,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### CRM
 
-=== "1W"
+=== "1WK"
 
-    ![1W - CRM](../../assets/outperformers/charts/23-11-17/information-technology/CRM-1w.webp)
+    ![1WK - CRM](../../assets/outperformers/charts/23-11-17/information-technology/CRM-1wk.webp)
 
 === "1Q"
 
@@ -251,9 +255,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### PANW
 
-=== "1W"
+=== "1WK"
 
-    ![1W - PANW](../../assets/outperformers/charts/23-11-17/information-technology/PANW-1w.webp)
+    ![1WK - PANW](../../assets/outperformers/charts/23-11-17/information-technology/PANW-1wk.webp)
 
 === "1Q"
 
@@ -269,9 +273,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### INTU
 
-=== "1W"
+=== "1WK"
 
-    ![1W - INTU](../../assets/outperformers/charts/23-11-17/information-technology/INTU-1w.webp)
+    ![1WK - INTU](../../assets/outperformers/charts/23-11-17/information-technology/INTU-1wk.webp)
 
 === "1Q"
 
@@ -287,9 +291,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### INTC
 
-=== "1W"
+=== "1WK"
 
-    ![1W - INTC](../../assets/outperformers/charts/23-11-17/information-technology/INTC-1w.webp)
+    ![1WK - INTC](../../assets/outperformers/charts/23-11-17/information-technology/INTC-1wk.webp)
 
 === "1Q"
 
@@ -305,9 +309,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### KLAC
 
-=== "1W"
+=== "1WK"
 
-    ![1W - KLAC](../../assets/outperformers/charts/23-11-17/information-technology/KLAC-1w.webp)
+    ![1WK - KLAC](../../assets/outperformers/charts/23-11-17/information-technology/KLAC-1wk.webp)
 
 === "1Q"
 
@@ -323,9 +327,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### ORCL
 
-=== "1W"
+=== "1WK"
 
-    ![1W - ORCL](../../assets/outperformers/charts/23-11-17/information-technology/ORCL-1w.webp)
+    ![1WK - ORCL](../../assets/outperformers/charts/23-11-17/information-technology/ORCL-1wk.webp)
 
 === "1Q"
 
@@ -341,9 +345,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### MPWR
 
-=== "1W"
+=== "1WK"
 
-    ![1W - MPWR](../../assets/outperformers/charts/23-11-17/information-technology/MPWR-1w.webp)
+    ![1WK - MPWR](../../assets/outperformers/charts/23-11-17/information-technology/MPWR-1wk.webp)
 
 === "1Q"
 
@@ -359,9 +363,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### AMAT
 
-=== "1W"
+=== "1WK"
 
-    ![1W - AMAT](../../assets/outperformers/charts/23-11-17/information-technology/AMAT-1w.webp)
+    ![1WK - AMAT](../../assets/outperformers/charts/23-11-17/information-technology/AMAT-1wk.webp)
 
 === "1Q"
 
@@ -377,9 +381,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 
 ### STX
 
-=== "1W"
+=== "1WK"
 
-    ![1W - STX](../../assets/outperformers/charts/23-11-17/information-technology/STX-1w.webp)
+    ![1WK - STX](../../assets/outperformers/charts/23-11-17/information-technology/STX-1wk.webp)
 
 === "1Q"
 
@@ -392,3 +396,5 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for NVDA, AVGO, ADBE, FI
 === "5Y"
 
     ![5Y - STX](../../assets/outperformers/charts/23-11-17/information-technology/STX-5y.webp)
+
+

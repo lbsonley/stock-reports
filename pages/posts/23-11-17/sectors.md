@@ -15,9 +15,10 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 
 ## Returns
 
-=== "1W"
 
-    {{ read_csv("../../assets/outperformers/returns/23-11-17/sectors-1w.csv", floatfmt=".1%") }}
+=== "1WK"
+
+    {{ read_csv("../../assets/outperformers/returns/23-11-17/sectors-1wk.csv", floatfmt=".1%") }}
 
 === "1Q"
 
@@ -31,13 +32,16 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 
     {{ read_csv("../../assets/outperformers/returns/23-11-17/sectors-5y.csv", floatfmt=".1%") }}
 
+
+
 ## Charts
+
 
 ### XLC
 
-=== "1W"
+=== "1WK"
 
-    ![1W - XLC](../../assets/outperformers/charts/23-11-17/sectors/XLC-1w.webp)
+    ![1WK - XLC](../../assets/outperformers/charts/23-11-17/sectors/XLC-1wk.webp)
 
 === "1Q"
 
@@ -53,9 +57,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 
 ### XLY
 
-=== "1W"
+=== "1WK"
 
-    ![1W - XLY](../../assets/outperformers/charts/23-11-17/sectors/XLY-1w.webp)
+    ![1WK - XLY](../../assets/outperformers/charts/23-11-17/sectors/XLY-1wk.webp)
 
 === "1Q"
 
@@ -71,9 +75,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 
 ### XLP
 
-=== "1W"
+=== "1WK"
 
-    ![1W - XLP](../../assets/outperformers/charts/23-11-17/sectors/XLP-1w.webp)
+    ![1WK - XLP](../../assets/outperformers/charts/23-11-17/sectors/XLP-1wk.webp)
 
 === "1Q"
 
@@ -89,9 +93,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 
 ### XLE
 
-=== "1W"
+=== "1WK"
 
-    ![1W - XLE](../../assets/outperformers/charts/23-11-17/sectors/XLE-1w.webp)
+    ![1WK - XLE](../../assets/outperformers/charts/23-11-17/sectors/XLE-1wk.webp)
 
 === "1Q"
 
@@ -107,9 +111,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 
 ### XLF
 
-=== "1W"
+=== "1WK"
 
-    ![1W - XLF](../../assets/outperformers/charts/23-11-17/sectors/XLF-1w.webp)
+    ![1WK - XLF](../../assets/outperformers/charts/23-11-17/sectors/XLF-1wk.webp)
 
 === "1Q"
 
@@ -125,9 +129,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 
 ### XLV
 
-=== "1W"
+=== "1WK"
 
-    ![1W - XLV](../../assets/outperformers/charts/23-11-17/sectors/XLV-1w.webp)
+    ![1WK - XLV](../../assets/outperformers/charts/23-11-17/sectors/XLV-1wk.webp)
 
 === "1Q"
 
@@ -143,9 +147,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 
 ### XLI
 
-=== "1W"
+=== "1WK"
 
-    ![1W - XLI](../../assets/outperformers/charts/23-11-17/sectors/XLI-1w.webp)
+    ![1WK - XLI](../../assets/outperformers/charts/23-11-17/sectors/XLI-1wk.webp)
 
 === "1Q"
 
@@ -161,9 +165,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 
 ### XLB
 
-=== "1W"
+=== "1WK"
 
-    ![1W - XLB](../../assets/outperformers/charts/23-11-17/sectors/XLB-1w.webp)
+    ![1WK - XLB](../../assets/outperformers/charts/23-11-17/sectors/XLB-1wk.webp)
 
 === "1Q"
 
@@ -179,9 +183,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 
 ### XLRE
 
-=== "1W"
+=== "1WK"
 
-    ![1W - XLRE](../../assets/outperformers/charts/23-11-17/sectors/XLRE-1w.webp)
+    ![1WK - XLRE](../../assets/outperformers/charts/23-11-17/sectors/XLRE-1wk.webp)
 
 === "1Q"
 
@@ -197,9 +201,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 
 ### XLK
 
-=== "1W"
+=== "1WK"
 
-    ![1W - XLK](../../assets/outperformers/charts/23-11-17/sectors/XLK-1w.webp)
+    ![1WK - XLK](../../assets/outperformers/charts/23-11-17/sectors/XLK-1wk.webp)
 
 === "1Q"
 
@@ -215,9 +219,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 
 ### XLU
 
-=== "1W"
+=== "1WK"
 
-    ![1W - XLU](../../assets/outperformers/charts/23-11-17/sectors/XLU-1w.webp)
+    ![1WK - XLU](../../assets/outperformers/charts/23-11-17/sectors/XLU-1wk.webp)
 
 === "1Q"
 
@@ -230,3 +234,5 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for XLC, XLY, XLP, XLE, 
 === "5Y"
 
     ![5Y - XLU](../../assets/outperformers/charts/23-11-17/sectors/XLU-5y.webp)
+
+

@@ -15,9 +15,10 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ## Returns
 
-=== "1W"
 
-    {{ read_csv("../../assets/outperformers/returns/23-11-17/consumer-discretionary-1w.csv", floatfmt=".1%") }}
+=== "1WK"
+
+    {{ read_csv("../../assets/outperformers/returns/23-11-17/consumer-discretionary-1wk.csv", floatfmt=".1%") }}
 
 === "1Q"
 
@@ -31,13 +32,16 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
     {{ read_csv("../../assets/outperformers/returns/23-11-17/consumer-discretionary-5y.csv", floatfmt=".1%") }}
 
+
+
 ## Charts
+
 
 ### PHM
 
-=== "1W"
+=== "1WK"
 
-    ![1W - PHM](../../assets/outperformers/charts/23-11-17/consumer-discretionary/PHM-1w.webp)
+    ![1WK - PHM](../../assets/outperformers/charts/23-11-17/consumer-discretionary/PHM-1wk.webp)
 
 === "1Q"
 
@@ -53,9 +57,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### RCL
 
-=== "1W"
+=== "1WK"
 
-    ![1W - RCL](../../assets/outperformers/charts/23-11-17/consumer-discretionary/RCL-1w.webp)
+    ![1WK - RCL](../../assets/outperformers/charts/23-11-17/consumer-discretionary/RCL-1wk.webp)
 
 === "1Q"
 
@@ -71,9 +75,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### BKNG
 
-=== "1W"
+=== "1WK"
 
-    ![1W - BKNG](../../assets/outperformers/charts/23-11-17/consumer-discretionary/BKNG-1w.webp)
+    ![1WK - BKNG](../../assets/outperformers/charts/23-11-17/consumer-discretionary/BKNG-1wk.webp)
 
 === "1Q"
 
@@ -89,9 +93,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### DHI
 
-=== "1W"
+=== "1WK"
 
-    ![1W - DHI](../../assets/outperformers/charts/23-11-17/consumer-discretionary/DHI-1w.webp)
+    ![1WK - DHI](../../assets/outperformers/charts/23-11-17/consumer-discretionary/DHI-1wk.webp)
 
 === "1Q"
 
@@ -107,9 +111,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### CCL
 
-=== "1W"
+=== "1WK"
 
-    ![1W - CCL](../../assets/outperformers/charts/23-11-17/consumer-discretionary/CCL-1w.webp)
+    ![1WK - CCL](../../assets/outperformers/charts/23-11-17/consumer-discretionary/CCL-1wk.webp)
 
 === "1Q"
 
@@ -125,9 +129,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### AMZN
 
-=== "1W"
+=== "1WK"
 
-    ![1W - AMZN](../../assets/outperformers/charts/23-11-17/consumer-discretionary/AMZN-1w.webp)
+    ![1WK - AMZN](../../assets/outperformers/charts/23-11-17/consumer-discretionary/AMZN-1wk.webp)
 
 === "1Q"
 
@@ -143,9 +147,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### LEN
 
-=== "1W"
+=== "1WK"
 
-    ![1W - LEN](../../assets/outperformers/charts/23-11-17/consumer-discretionary/LEN-1w.webp)
+    ![1WK - LEN](../../assets/outperformers/charts/23-11-17/consumer-discretionary/LEN-1wk.webp)
 
 === "1Q"
 
@@ -161,9 +165,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### CMG
 
-=== "1W"
+=== "1WK"
 
-    ![1W - CMG](../../assets/outperformers/charts/23-11-17/consumer-discretionary/CMG-1w.webp)
+    ![1WK - CMG](../../assets/outperformers/charts/23-11-17/consumer-discretionary/CMG-1wk.webp)
 
 === "1Q"
 
@@ -179,9 +183,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### NVR
 
-=== "1W"
+=== "1WK"
 
-    ![1W - NVR](../../assets/outperformers/charts/23-11-17/consumer-discretionary/NVR-1w.webp)
+    ![1WK - NVR](../../assets/outperformers/charts/23-11-17/consumer-discretionary/NVR-1wk.webp)
 
 === "1Q"
 
@@ -197,9 +201,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### EXPE
 
-=== "1W"
+=== "1WK"
 
-    ![1W - EXPE](../../assets/outperformers/charts/23-11-17/consumer-discretionary/EXPE-1w.webp)
+    ![1WK - EXPE](../../assets/outperformers/charts/23-11-17/consumer-discretionary/EXPE-1wk.webp)
 
 === "1Q"
 
@@ -215,9 +219,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### GRMN
 
-=== "1W"
+=== "1WK"
 
-    ![1W - GRMN](../../assets/outperformers/charts/23-11-17/consumer-discretionary/GRMN-1w.webp)
+    ![1WK - GRMN](../../assets/outperformers/charts/23-11-17/consumer-discretionary/GRMN-1wk.webp)
 
 === "1Q"
 
@@ -233,9 +237,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### ABNB
 
-=== "1W"
+=== "1WK"
 
-    ![1W - ABNB](../../assets/outperformers/charts/23-11-17/consumer-discretionary/ABNB-1w.webp)
+    ![1WK - ABNB](../../assets/outperformers/charts/23-11-17/consumer-discretionary/ABNB-1wk.webp)
 
 === "1Q"
 
@@ -251,9 +255,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### TSLA
 
-=== "1W"
+=== "1WK"
 
-    ![1W - TSLA](../../assets/outperformers/charts/23-11-17/consumer-discretionary/TSLA-1w.webp)
+    ![1WK - TSLA](../../assets/outperformers/charts/23-11-17/consumer-discretionary/TSLA-1wk.webp)
 
 === "1Q"
 
@@ -269,9 +273,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### MAR
 
-=== "1W"
+=== "1WK"
 
-    ![1W - MAR](../../assets/outperformers/charts/23-11-17/consumer-discretionary/MAR-1w.webp)
+    ![1WK - MAR](../../assets/outperformers/charts/23-11-17/consumer-discretionary/MAR-1wk.webp)
 
 === "1Q"
 
@@ -287,9 +291,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### LULU
 
-=== "1W"
+=== "1WK"
 
-    ![1W - LULU](../../assets/outperformers/charts/23-11-17/consumer-discretionary/LULU-1w.webp)
+    ![1WK - LULU](../../assets/outperformers/charts/23-11-17/consumer-discretionary/LULU-1wk.webp)
 
 === "1Q"
 
@@ -305,9 +309,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### HLT
 
-=== "1W"
+=== "1WK"
 
-    ![1W - HLT](../../assets/outperformers/charts/23-11-17/consumer-discretionary/HLT-1w.webp)
+    ![1WK - HLT](../../assets/outperformers/charts/23-11-17/consumer-discretionary/HLT-1wk.webp)
 
 === "1Q"
 
@@ -323,9 +327,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 
 ### ROST
 
-=== "1W"
+=== "1WK"
 
-    ![1W - ROST](../../assets/outperformers/charts/23-11-17/consumer-discretionary/ROST-1w.webp)
+    ![1WK - ROST](../../assets/outperformers/charts/23-11-17/consumer-discretionary/ROST-1wk.webp)
 
 === "1Q"
 
@@ -338,3 +342,5 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for PHM, RCL, BKNG, DHI,
 === "5Y"
 
     ![5Y - ROST](../../assets/outperformers/charts/23-11-17/consumer-discretionary/ROST-5y.webp)
+
+

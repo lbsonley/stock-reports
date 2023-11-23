@@ -15,9 +15,10 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for SPY, QQQ, DIA, IWM.
 
 ## Returns
 
-=== "1W"
 
-    {{ read_csv("../../assets/outperformers/returns/23-11-17/indices-1w.csv", floatfmt=".1%") }}
+=== "1WK"
+
+    {{ read_csv("../../assets/outperformers/returns/23-11-17/indices-1wk.csv", floatfmt=".1%") }}
 
 === "1Q"
 
@@ -31,13 +32,16 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for SPY, QQQ, DIA, IWM.
 
     {{ read_csv("../../assets/outperformers/returns/23-11-17/indices-5y.csv", floatfmt=".1%") }}
 
+
+
 ## Charts
+
 
 ### SPY
 
-=== "1W"
+=== "1WK"
 
-    ![1W - SPY](../../assets/outperformers/charts/23-11-17/indices/SPY-1w.webp)
+    ![1WK - SPY](../../assets/outperformers/charts/23-11-17/indices/SPY-1wk.webp)
 
 === "1Q"
 
@@ -53,9 +57,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for SPY, QQQ, DIA, IWM.
 
 ### QQQ
 
-=== "1W"
+=== "1WK"
 
-    ![1W - QQQ](../../assets/outperformers/charts/23-11-17/indices/QQQ-1w.webp)
+    ![1WK - QQQ](../../assets/outperformers/charts/23-11-17/indices/QQQ-1wk.webp)
 
 === "1Q"
 
@@ -71,9 +75,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for SPY, QQQ, DIA, IWM.
 
 ### DIA
 
-=== "1W"
+=== "1WK"
 
-    ![1W - DIA](../../assets/outperformers/charts/23-11-17/indices/DIA-1w.webp)
+    ![1WK - DIA](../../assets/outperformers/charts/23-11-17/indices/DIA-1wk.webp)
 
 === "1Q"
 
@@ -89,9 +93,9 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for SPY, QQQ, DIA, IWM.
 
 ### IWM
 
-=== "1W"
+=== "1WK"
 
-    ![1W - IWM](../../assets/outperformers/charts/23-11-17/indices/IWM-1w.webp)
+    ![1WK - IWM](../../assets/outperformers/charts/23-11-17/indices/IWM-1wk.webp)
 
 === "1Q"
 
@@ -104,3 +108,5 @@ A summary and charts of 1 Week, QoQ, YoY and 5Y returns for SPY, QQQ, DIA, IWM.
 === "5Y"
 
     ![5Y - IWM](../../assets/outperformers/charts/23-11-17/indices/IWM-5y.webp)
+
+
