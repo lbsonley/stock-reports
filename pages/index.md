@@ -3,8 +3,6 @@ hide:
   - toc
 ---
 
-# Technical Stock Market Analysis
+# Reports
 
-Studying price action to identify trading opporunities.
-
-## Reports
+Price action analysis of Major Index ETFs, GICS Sector ETFs and Outperforming Stocks.
