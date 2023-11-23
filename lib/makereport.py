@@ -10,7 +10,7 @@ import string
 
 
 def make_report_returns(path_date, report_name):
-    time_frames = ["1W", "1Q", "1Y", "5Y"]
+    time_frames = ["1WK", "1Q", "1Y", "5Y"]
     reports_string = "\n"
 
     for time_frame in time_frames:
@@ -21,7 +21,7 @@ def make_report_returns(path_date, report_name):
 
 
 def make_report_charts(symbols, path_date, report_name):
-    time_frames = ["1W", "1Q", "1Y", "5Y"]
+    time_frames = ["1WK", "1Q", "1Y", "5Y"]
     charts_string = "\n"
     for symbol in symbols:
         charts_string += f"### {symbol}\n\n"

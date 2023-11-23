@@ -38,22 +38,6 @@ def format_date(date):
     return date.strftime("%y-%m-%d")
 
 
-def format_interval(interval):
-    formatted_interval = ""
-
-    match interval:
-        case "1mo":
-            formatted_interval = "monthly"
-        case "1wk":
-            formatted_interval = "weekly"
-        case "1d":
-            formatted_interval = "daily"
-        case "1h":
-            formatted_interval = "hourly"
-
-    return formatted_interval
-
-
 def load_stocks(symbols, interval, start, end):
     df = yf.download(
         symbols,

@@ -13,7 +13,7 @@ outperformers_index_sector(
     start=dates["last_monday"],
     end=dates["last_friday"],
     interval="30m",
-    period="1w",
+    period="1wk",
 )
 
 print("Fetching data for:")

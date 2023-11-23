@@ -1,5 +1,6 @@
 from pathlib import Path
 import pandas as pd
+from lib.dicts import *
 from lib.utils import *
 from lib.makereport import *
 
@@ -7,31 +8,10 @@ from lib.makereport import *
 def outperformers_stocks(period):
     dates = get_dates()
 
-    returns_label = ""
-    chart_interval_label = ""
-    outperform_start = ""
-
-    match period:
-        case "1w":
-            returns_label = "1 Week ∆"
-            chart_interval = "30m"
-            chart_interval_label = "30m"
-            outperform_start = dates["last_monday"]
-        case "1q":
-            returns_label = "13 Week ∆"
-            chart_interval = "1d"
-            chart_interval_label = "Daily"
-            outperform_start = dates["last_quarter"]
-        case "1y":
-            returns_label = "52 Week ∆"
-            chart_interval = "1wk"
-            chart_interval_label = "Weekly"
-            outperform_start = dates["last_year"]
-        case "5y":
-            returns_label = "5 Year ∆"
-            chart_interval = "1mo"
-            chart_interval_label = "Monthly"
-            outperform_start = dates["last_5_year"]
+    returns_label = returns_labels_by_period[period]
+    chart_interval = chart_intervals_by_period[period]
+    chart_interval_label = chart_interval_labels_by_period[period]
+    outperform_start = start_dates_by_period[period]
 
     indices_returns = pd.read_csv(
         f'pages/assets/outperformers/returns/{format_date(dates["last_friday"])}/indices-{period}.csv'
@@ -91,14 +71,14 @@ def outperformers_stocks(period):
         ].to_list()
 
         time_frame_configs = [
-            ("30m", dates["last_monday"]),
-            ("1d", dates["last_quarter"]),
-            ("1wk", dates["last_year"]),
-            ("1mo", dates["last_5_year"]),
+            ("1wk", "30m", dates["last_monday"]),
+            ("1q", "1d", dates["last_quarter"]),
+            ("1y", "1wk", dates["last_year"]),
+            ("5y", "1mo", dates["last_5_year"]),
         ]
 
         print("load stocks for sector: %s" % name)
-        for interval, start in time_frame_configs:
+        for period, interval, start in time_frame_configs:
             print(f"load history for interval: {interval}")
             constituent_history = load_stocks(
                 outperforming_stock_symbols,
@@ -107,21 +87,7 @@ def outperformers_stocks(period):
                 dates["last_friday"],
             )
 
-            stock_return_label = ""
-            stock_return_period = ""
-            match interval:
-                case "30m":
-                    stock_return_label = "1 Week ∆"
-                    stock_return_period = "1w"
-                case "1d":
-                    stock_return_label = "13 Week ∆"
-                    stock_return_period = "1q"
-                case "1wk":
-                    stock_return_label = "52 Week ∆"
-                    stock_return_period = "1y"
-                case "1mo":
-                    stock_return_label = "5 Year ∆"
-                    stock_return_period = "5y"
+            stock_return_label = returns_labels_by_period[period]
 
             constituent_returns_for_table = get_returns(
                 constituent_history,
@@ -129,7 +95,7 @@ def outperformers_stocks(period):
                 stock_return_label,
             )
             constituent_returns_for_table.to_csv(
-                f'pages/assets/outperformers/returns/{format_date(dates["last_friday"])}/{name.lower().replace(" ", "-")}-{stock_return_period}.csv',
+                f'pages/assets/outperformers/returns/{format_date(dates["last_friday"])}/{name.lower().replace(" ", "-")}-{period}.csv',
                 index=False,
             )
 
@@ -151,10 +117,9 @@ def outperformers_stocks(period):
 
                 make_chart(
                     df=stock_history,
-                    title="%s (%s) - %s"
-                    % (stock_name, symbol, stock_return_period),
+                    title="%s (%s) - %s" % (stock_name, symbol, period),
                     strategy="outperformers",
-                    filename=f'{format_date(dates["last_friday"])}/{name.lower().replace(" ", "-")}/{symbol}-{stock_return_period}',
+                    filename=f'{format_date(dates["last_friday"])}/{name.lower().replace(" ", "-")}/{symbol}-{period}',
                 )
         make_report(
             dates["last_friday"],
@@ -165,22 +130,8 @@ def outperformers_stocks(period):
 
 
 def outperformers_index_sector(start, end, interval, period):
-    returns_label = ""
-    chart_interval = ""
-
-    match period:
-        case "1w":
-            returns_label = "1 Week ∆"
-            chart_interval = "30m"
-        case "1q":
-            returns_label = "13 Week ∆"
-            chart_interval = "Daily"
-        case "1y":
-            returns_label = "52 Week ∆"
-            chart_interval = "Weekly"
-        case "5y":
-            returns_label = "5 Year ∆"
-            chart_interval = "Monthly"
+    returns_label = returns_labels_by_period[period]
+    chart_interval_label = chart_interval_labels_by_period[period]
 
     ###########
     # Indices #
@@ -208,7 +159,7 @@ def outperformers_index_sector(start, end, interval, period):
         make_chart(
             df=index_history,
             title="%s (%s) - %s (%s)"
-            % (index_name, symbol, period, chart_interval),
+            % (index_name, symbol, period, chart_interval_label),
             strategy="outperformers",
             filename=f"{format_date(end)}/indices/{symbol}-{period}",
         )
@@ -246,7 +197,7 @@ def outperformers_index_sector(start, end, interval, period):
         sector_name = sectors.loc[sectors["Symbol"] == symbol, "Name"].values[0]
         make_chart(
             df=sector_history,
-            title=f"{sector_name} ({symbol}) - {period} ({chart_interval})",
+            title=f"{sector_name} ({symbol}) - {period} ({chart_interval_label})",
             strategy="outperformers",
             filename=f"{format_date(end)}/sectors/{symbol}-{period}",
         )
